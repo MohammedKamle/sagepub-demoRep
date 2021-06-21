@@ -43,6 +43,7 @@ public abstract class BaseTest {
                 capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
             }
         }
+        capabilities.setCapability("build", System.getenv("BROWSERSTACK_BUILD_NAME"));
         return capabilities;
     }
 
